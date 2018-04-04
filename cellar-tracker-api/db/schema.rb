@@ -25,31 +25,10 @@ ActiveRecord::Schema.define(version: 20180328231147) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "breweries", force: :cascade do |t|
-    t.string "name"
-    t.text "location"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "brewers", force: :cascade do |t|
-    t.integer "breweryId"
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "cellars", force: :cascade do |t|
     t.integer "userId"
     t.integer "beerId"
     t.integer "rating"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "ingredients", force: :cascade do |t|
-    t.string "type"
-    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

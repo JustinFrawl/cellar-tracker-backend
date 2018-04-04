@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
   def create
     #
     user = User.find_by(user_name: params[:user_name])
+    # byebug
     if user && user.authenticate(params[:password])
       payload = {user_id: user.id}
       token = issue_token(payload)
